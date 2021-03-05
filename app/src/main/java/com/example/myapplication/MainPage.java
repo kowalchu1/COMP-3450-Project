@@ -13,7 +13,13 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import org.json.JSONObject;
+
 import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class MainPage extends AppCompatActivity {
 
@@ -30,24 +36,36 @@ public class MainPage extends AppCompatActivity {
         FloatingActionButton share = findViewById(R.id.Share);
 
 
+
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                //This is for sharing the file/data to the athlete
-                Intent intentShareFile = new Intent(Intent.ACTION_SEND);
-                File fileWithinMyDir = new File(/*Empty till database is created*/);
 
-                if(fileWithinMyDir.exists()) {
-                    intentShareFile.setType("application/pdf");
-                    intentShareFile.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:// //File goes here"));
+                //Getting Data from MYSQL
+                URL url;
+                HttpURLConnection urlConnection = null;
+                try {
+                    url = new URL("//");
 
-                    intentShareFile.putExtra(Intent.EXTRA_SUBJECT,
-                            "Sharing File...");
-                    intentShareFile.putExtra(Intent.EXTRA_TEXT, "Sharing File...");
+                    urlConnection = (HttpURLConnection) url
+                            .openConnection();
 
-                    startActivity(Intent.createChooser(intentShareFile, "Share File"));
+                    InputStream in = urlConnection.getInputStream();
+
+                    InputStreamReader isw = new InputStreamReader(in);
+
+                    int data = isw.read();
+                    while (data != -1) {
+                        char current = (char) data;
+                        data = isw.read();
+                        System.out.print(current);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    if (urlConnection != null) {
+                        urlConnection.disconnect();
+                    }
                 }
 
             }
