@@ -11,7 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import org.json.JSONObject;
 
@@ -33,9 +36,28 @@ public class MainPage extends AppCompatActivity {
         Button timeButton = findViewById(R.id.TimeButton);
         Button drillButton = findViewById(R.id.DrillButton);
         Button eventButton = findViewById(R.id.EventButton);
+        Button saveButton = findViewById(R.id.saveButton);
         FloatingActionButton share = findViewById(R.id.Share);
+        TextView nameView = findViewById(R.id.nameView);
+        TextView descriptionView = findViewById(R.id.descriptionView);
 
+        Spinner courseSpinner = findViewById(R.id.courseSpinner);
+// Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.courseType, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        courseSpinner.setAdapter(adapter);
 
+        Spinner swimTypeSpinner = findViewById(R.id.swimType);
+// Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
+                R.array.swimType, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        swimTypeSpinner.setAdapter(adapter);
 
         share.setOnClickListener(new View.OnClickListener() {
             @Override
