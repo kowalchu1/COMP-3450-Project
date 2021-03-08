@@ -57,7 +57,7 @@ public class MainPage extends AppCompatActivity {
 // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
-        swimTypeSpinner.setAdapter(adapter);
+        swimTypeSpinner.setAdapter(adapter2);
 
         share.setOnClickListener(new View.OnClickListener() {
             @Override
