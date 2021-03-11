@@ -11,16 +11,18 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_main_page">MainPage</string>
 
-    <string-array name= "courseType">
+    <string-array name="courseType">
         <item>Short Course</item>
         <item>Long Course</item>
     </string-array>
 
-    <string-array name= "swimType">
+    <string-array name="swimType">
         <item>50M</item>
         <item>100M</item>
         <item>200M</item>
         <item>400M</item>
         <item>1500M</item>
     </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_time">TimeActivity</string>
 </resources>

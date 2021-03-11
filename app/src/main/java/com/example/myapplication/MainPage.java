@@ -59,6 +59,14 @@ public class MainPage extends AppCompatActivity {
 // Apply the adapter to the spinner
         swimTypeSpinner.setAdapter(adapter2);
 
+
+        timeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTimeActivity();
+            }
+        });
+
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,6 +99,13 @@ public class MainPage extends AppCompatActivity {
                 }
 
             }
+
         });
+
     }
+    public void openTimeActivity() {
+        Intent intent = new Intent(this, TimeActivity.class);
+        startActivity(intent);
+    }
+
 }
