@@ -41,6 +41,7 @@ public class MainPage extends AppCompatActivity {
         TextView nameView = findViewById(R.id.nameView);
         TextView descriptionView = findViewById(R.id.descriptionView);
 
+
         Spinner courseSpinner = findViewById(R.id.courseSpinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -106,6 +107,10 @@ public class MainPage extends AppCompatActivity {
     public void openTimeActivity() {
         Intent intent = new Intent(this, TimeActivity.class);
         startActivity(intent);
+    }
+    public void openSite(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://gowolfpack.ca/sports/swimming-and-diving/schedule"));
+        startActivity(browserIntent);
     }
 
 }
