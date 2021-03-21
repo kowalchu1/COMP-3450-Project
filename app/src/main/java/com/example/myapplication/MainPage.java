@@ -68,6 +68,8 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
+
+
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,13 +106,18 @@ public class MainPage extends AppCompatActivity {
         });
 
     }
+    //This opens the activity for the Times
     public void openTimeActivity() {
         Intent intent = new Intent(this, TimeActivity.class);
         startActivity(intent);
     }
+    //Directs the user to the TRU Wolfpacks Scheduling page
     public void openSite(View view){
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://gowolfpack.ca/sports/swimming-and-diving/schedule"));
         startActivity(browserIntent);
     }
-
+    public void openDrill(View view){
+        Intent browserIntentDrills = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.swimming.ca/en/masters/fitness/drills/"));
+        startActivity(browserIntentDrills);
+    }
 }
