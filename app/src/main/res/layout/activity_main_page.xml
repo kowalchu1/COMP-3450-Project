@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainPage">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.MyApplication.AppBarOverlay"/>
+        android:theme="@style/Theme.MyApplication.AppBarOverlay" />
 
     <include
         android:id="@+id/include"
@@ -99,7 +100,7 @@
             android:layout_width="104dp"
             android:layout_height="43dp"
             android:enabled="false"
-            android:text="**"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.426"
@@ -112,7 +113,7 @@
             android:layout_width="104dp"
             android:layout_height="43dp"
             android:enabled="false"
-            android:text="*"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.426"
@@ -120,13 +121,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.45" />
 
-        <EditText
+        <TextView
             android:id="@+id/namePerson"
             android:layout_width="76dp"
             android:layout_height="37dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name:"
+            android:textColor="#000000"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toEndOf="parent"
@@ -135,14 +138,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.323" />
 
-        <EditText
+        <TextView
             android:id="@+id/descriptionSport"
             android:layout_width="76dp"
             android:layout_height="37dp"
             android:ems="10"
-            android:enabled="false"
             android:inputType="textPersonName"
             android:text="Sport:"
+            android:textColor="#000000"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toEndOf="parent"
@@ -155,6 +159,9 @@
             android:id="@+id/courseSpinner"
             android:layout_width="169dp"
             android:layout_height="43dp"
+            android:background="#FF5722"
+            android:backgroundTint="#00FFFFFF"
+            android:scrollbarSize="4dp"
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.731"
@@ -162,14 +169,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.627" />
 
-        <EditText
+        <TextView
             android:id="@+id/coursePlainText"
             android:layout_width="117dp"
             android:layout_height="43dp"
             android:ems="10"
-            android:enabled="false"
             android:inputType="textPersonName"
-            android:text="Course Type"
+            android:text="Course Type:"
+            android:textColor="#000000"
+            android:textSize="19sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toEndOf="parent"
@@ -182,6 +190,8 @@
             android:id="@+id/swimType"
             android:layout_width="169dp"
             android:layout_height="43dp"
+            android:background="#FF5722"
+            android:backgroundTint="#02FF5722"
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.731"
@@ -189,14 +199,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.784" />
 
-        <EditText
+        <TextView
             android:id="@+id/distancePlainText"
             android:layout_width="117dp"
             android:layout_height="43dp"
             android:ems="10"
-            android:enabled="false"
             android:inputType="textPersonName"
-            android:text="Distance"
+            android:text="Distance:"
+            android:textColor="#000000"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toEndOf="parent"
@@ -221,9 +232,13 @@
             android:id="@+id/wolfpack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/tru_logo_1_014828"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="1dp" />
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.008"
+            app:srcCompat="@drawable/tru_logo_1_014828" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
